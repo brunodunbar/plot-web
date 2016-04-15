@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plot</title>
+
+    <!--<script type="text/javascript">-->
+
+        <!--var POINTS = 10;-->
+
+
+        <!--function draw() {-->
+
+            <!--var canvas = document.getElementById('plotCanvas');-->
+            <!--var ctx = canvas.getContext('2d');-->
+
+            <!--ctx.clearRect(0, 0, canvas.width, canvas.height);-->
+
+
+            <!--var coordX = Number(document.getElementById('coodX').value);-->
+            <!--var coordY = Number(document.getElementById('coodY').value);-->
+
+
+            <!--var cx = canvas.width / 2;-->
+            <!--var cy = canvas.height / 2;-->
+
+            <!--ctx.beginPath();-->
+            <!--ctx.moveTo(cx, 0);-->
+            <!--ctx.lineTo(cx, canvas.height);-->
+            <!--ctx.stroke();-->
+
+            <!--ctx.beginPath();-->
+            <!--ctx.moveTo(0, cy);-->
+            <!--ctx.lineTo(canvas.width, cy);-->
+            <!--ctx.stroke();-->
+
+            <!--var cyPointHeight = cy / POINTS;-->
+            <!--var cxPointHeight = cx / POINTS;-->
+
+            <!--for (var i = 1; i <= POINTS; i++) {-->
+
+                <!--ctx.beginPath();-->
+                <!--ctx.moveTo(cx - 5, cy - (i * cyPointHeight));-->
+                <!--ctx.lineTo(cx + 5, cy - (i * cyPointHeight));-->
+                <!--ctx.stroke();-->
+
+
+                <!--ctx.beginPath();-->
+                <!--ctx.moveTo(cx - 5, cy + (i * cyPointHeight));-->
+                <!--ctx.lineTo(cx + 5, cy + (i * cyPointHeight));-->
+                <!--ctx.stroke();-->
+
+                <!--ctx.beginPath();-->
+                <!--ctx.moveTo(cx - (i * cxPointHeight), cy - 5);-->
+                <!--ctx.lineTo(cx - (i * cxPointHeight), cy + 5);-->
+                <!--ctx.stroke();-->
+
+
+                <!--ctx.beginPath();-->
+                <!--ctx.moveTo(cx + (i * cxPointHeight), cy - 5);-->
+                <!--ctx.lineTo(cx + (i * cxPointHeight), cy + 5);-->
+                <!--ctx.stroke();-->
+
+            <!--}-->
+
+            <!--if (coordX && coordY) {-->
+                <!--ctx.fillRect(cx + (coordX * cxPointHeight) - 5, cy - (coordY * cyPointHeight) - 5, 10, 10);-->
+            <!--}-->
+
+
+        <!--}-->
+    <!--</script>-->
+
+    <script type="text/javascript" src="lib/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="lib/d3.js"></script>
+    <script type="text/javascript" src="plot-api.js"></script>
+
+
+</head>
+<body onload="init();">
+
+<!--<label for="coodX">X</label>-->
+<!--<input id="coodX" type="number"/>-->
+<!--<label for="coodY">Y</label>-->
+<!--<input id="coodY" type="number"/>-->
+<!--<button onclick="draw();">Plot</button>-->
+<!--<canvas id="plotCanvas" width="300" height="300" style="border: 1px;">-->
+<!--</canvas>-->
+
+<svg id="screen" width="500" height="500">
+
+
+
+</svg>
+
+</body>
+</html>
